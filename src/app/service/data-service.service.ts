@@ -12,18 +12,10 @@ export class DataServiceService implements OnInit {
   }
   
   baseUrl: string = 'https://run.mocky.io/v3/c5dc7de1-3ddb-4e0b-9285-a01bd243dd71';
-
   data: any;
-
 
   constructor(private httpClient: HttpClient) {   
   }
-
-  // getCustomerPage(pageNumber: number, pageSize: number, sortKey: string, sortDirection: string): Observable<LaunchRecord.RootObject> {
-  //   var query = `?pageNumber=${pageNumber}&pageSize=${pageSize}&sortKey=${sortKey}&sortDirection=${sortDirection}`;
-  //   console.log("GET: " + this.baseUrl + query)
-  //   return this.httpClient.get<LaunchRecord.RootObject>(this.baseUrl + query);
-  // }
 
   getLaunchReport(): Observable<LaunchRecord.RootObject> {   
     console.log("GET: " + this.baseUrl)
@@ -34,6 +26,5 @@ export class DataServiceService implements OnInit {
     var uri = this.baseUrl + "/" + (id);
     return this.httpClient.delete(uri);
   }
-
 
 }
