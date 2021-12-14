@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col col-md ">
+      <mat-card class="example-card text-white bg-dark">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{_data[0].name}}</mat-card-title>          
+        </mat-card-header>
+        <img mat-card-image class="card-img-top" src="{{ _data[0].flickr_images[1] }}" alt="{{ _data[0].flickr_images[1] }}">
+        <mat-card-content >
+          <p> "{{ _data[0].description }}          
+          </p>
+        </mat-card-content>
+        <!-- <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions> -->
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row card-group">
+    <div class="col" *ngFor="let data of _data">
+      <mat-card class=" text-white bg-dark">
+        <mat-card-header>          
+          <mat-card-title><span class="mx-auto">{{data.name}} </span> </mat-card-title>          
+        </mat-card-header>
+        <img mat-card-image class="card-img-preview mx-auto" src="{{data.flickr_images[1] }}" alt="alt">
+        <mat-card-content>
+          <p class="card-text">
+            Company: <b>{{ data.company }}</b>  <br/>
+            Cost per launch: {{ data.cost_per_launch | currency }} <br/>
+            First Flight: {{ data.first_flight }} <br/>            
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
