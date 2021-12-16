@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; background-color: black;}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+    --text-color: #eee;
+    --bkg-color: #252222;
+    --btn-txt-color: rgb(46, 43, 43);
+    --btn-bg-color: rgb(20, 211, 195); }
 
+ 

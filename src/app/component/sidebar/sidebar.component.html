@@ -2,14 +2,44 @@
     <button mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
     </button>
-    space-lens
+    space-lens    
 </mat-toolbar>
 
 
 <mat-sidenav-container *ngIf="shouldRun">
-
-    <mat-sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')">
-        <!-- <p class="">Sidenav content</p> -->
+    <mat-sidenav mat-elevation-z6 mode="side" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')">
+        
+        <button mat-button class="menu-button">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button>
+        <mat-divider class="bg-light"></mat-divider>
+        <button mat-button class="menu-button mt-4">
+            <mat-icon>rocket</mat-icon>    
+            <span>Recent Launches</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>launch</mat-icon>    
+            <span>Rocket Details</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>photo</mat-icon>    
+            <span>SpaceX Photos</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>photo</mat-icon>    
+            <span>NASA Photos</span>
+        </button>
+        <!-- <mat-divider></mat-divider> -->
+        <button mat-button class="menu-button mt-5">
+            <mat-icon>info</mat-icon>
+            <span>Info</span>
+        </button>
+        
+        <button mat-button class="menu-button">
+            <mat-icon>help</mat-icon>
+            <span>Help</span>
+        </button>
     </mat-sidenav>
     <mat-sidenav-content>
         <app-dashboard></app-dashboard>
