@@ -8,11 +8,14 @@
             <h4>Rocket: <b>{{ _data[0].name }}</b></h4><br> 
             Company: <b>{{ _data[0].company }}</b><br><br>          
             {{ _data[0].description }} <br><br>
-            Stages: {{ _data[0].stages }} <br>
-            Boosters: {{ _data[0].boosters }} <br><br>
+            <!-- Stages: {{ _data[0].stages }} <br>
+            Boosters: {{ _data[0].boosters }} <br><br> -->
             First Flight: <i>{{ _data[0].first_flight }} </i><br>
-            Cost per launch: <i>{{ _data[0].cost_per_launch | currency }}</i> <br> 
-            <p class="mt-4"> Wikipedia: <i><a>{{ _data[0].wikipedia }} </a></i><br></p>
+            Cost per launch: <i>{{ _data[0].cost_per_launch | currency }}</i> <br> <br>   
+
+            <img *ngFor="let pic of _data[0].flickr_images"src={{pic}} alt="thumbnail" class="img-thumbnail mr-1"
+  style="height: 80px">
+            <!-- <p class="mt-4"> Wikipedia: <i><a>{{ _data[0].wikipedia }} </a></i><br></p> -->
           </div>
           <div class="col col-7">
             <img mat-card-image class="card-img-top" src="{{ _data[0].flickr_images[1] }}"
