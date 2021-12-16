@@ -4,8 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MainContentComponent } from './component/main-content/main-content.component';
-import { MainHeaderComponent } from './component/main-header/main-header.component';
 import { MainFooterComponent } from './component/main-footer/main-footer.component';
 import { MaterialModule } from './material.module';
 import { NavbarComponent } from './component/navbar/navbar.component';
@@ -21,15 +19,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
+import { SidebarComponent } from './component/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    MainContentComponent,
-    MainHeaderComponent,
+    AppComponent,        
     MainFooterComponent,
     NavbarComponent,
-    DashboardComponent
+    DashboardComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
